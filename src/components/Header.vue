@@ -11,6 +11,7 @@ import {RouterLink} from "vue-router"
                 <a href="">Product</a>
                 <a href="">About</a>
                 <a href="">Contact</a>
+                <a href=""><img src="../assets/shopping.svg" alt=""></a>
             
                 
             </div>
@@ -51,5 +52,10 @@ main{
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
+}
+.navbar .menu a img{
+    color: #f63e4e;
+    height: 30px;
+    margin:-7px;
 }
 </style>
