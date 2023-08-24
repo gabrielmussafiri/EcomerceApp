@@ -4,7 +4,7 @@ import {RouterLink} from "vue-router"
 <template>
     <main>
         <nav class="navbar">
-            <div class="Logo">
+            <div class="logo">
                 <h1>MY Store</h1>
             </div>
             <div class="menu">
@@ -24,14 +24,32 @@ main{
     margin:0;
     padding: 0;
     font-family: sans-serif;
+    
 }
 .navbar {
     padding: 20px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-
+    position: sticky;
+    z-index: 999;
+    background-color: #ffffff;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
 }
-
+.navbar .logo h1{
+    color:#424144;
+    border-bottom: 4px solid #fd6561;
+}
+.navbar .menu{
+    display: inline-block;
+}
+.navbar .menu a {
+    /* display:block; */
+    margin-left: 20px;
+    color: #424144;
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
 </style>
