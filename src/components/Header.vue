@@ -59,4 +59,10 @@ main{
     fill: #f63e4e; 
    
 }
+.active{
+    color: #f63e4e;
+}
+.navbar .menu .a:hover{
+    border-bottom:4px solid #f63e4e;
+}
 </style>
