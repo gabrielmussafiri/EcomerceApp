@@ -2,6 +2,8 @@
 
 import { createRouter,createWebHistory } from "vue-router";
 import ProductView from '../views/ProductView.vue';
+import AboutView from '../views/AboutView.vue';
+
 
 
 
@@ -18,18 +20,13 @@ const router = createRouter({
             path:"/products",
             name:"products",
             component:ProductView
+        },
+        {
+            path:"/about",
+            name:"about",
+            component:AboutView,
+            
         }
-        // {
-        //     path:"/cars/:id",
-        //     name:"car",
-        //     component:CarView,
-        //     children: [
-        //         {
-        //             path:"contact",
-        //             component:ContactView
-        //         }
-        //     ]
-        // }
     ]
 })
 
