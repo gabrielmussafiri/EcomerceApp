@@ -27,8 +27,7 @@ onMounted(fetchProducts);
 <template>
     <main>
         <h1>Product</h1>
-        <div class="card"></div>
-        <div v-for="product in products" :key="product.id">
+        <div class="container" v-for="product in products" :key="product.id">
             <img :src="product.image" alt="">
         <!-- {{ product.title }} - ${{ product.price }} -->
       <!-- <button @click="addToCart(product)">Add to Cart</button> -->
@@ -43,8 +42,25 @@ main{
     padding: 0;
     font-family: sans-serif;
     padding: 20px 5%;
-
-    
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  width:fit-content;
+  height:fit-content;
+  overflow:hidden;
+  border-radius: 2%;
+  box-shadow: 1px 1px 10px rgba(0 ,0,0, 0.1);
+  margin-bottom: 35px;
+  margin-right: 20px;
+  cursor: pointer;
+  
+}
+.container img{
+    width: 100%;
+    height: 190px;
+    margin: 0;
 }
 </style>
 
