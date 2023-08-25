@@ -68,8 +68,47 @@ main{
     background: #f5f5f5;
     box-shadow: 0 10px 20px rgba(0,0,0.3);
     border-radius: 5px;
-    padding:
+    padding: 5px;
+    margin-bottom: 20px;
+}
+.products .card img{
+    height: 250px;
+    width: 250px;
+}
+.products .card .description{
+    padding: 5px 20px;
+    opacity: 0.8;
+}
+.products .card .title{
+    font-weight: 900;
+    font-size: 20px;
+    color:#424144;
+    padding: 0 20px;
+}
 
+.products .card .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.products .card .box .price{
+color: #f63e4e;
+font-weight: bold;
+}
+.products .card .box .btn{
+    font-size: 13px;
+    color: #f63e4e;
+    padding: 10px 18px;
+    font-weight: 900;
+    border:1px solid #f63e4e;
+    border-radius: 20px;
+}
+.products .card .box .btn:hover{
+    cursor: pointer;
+    background-color: #f63e4e;
+    color: white;
 }
 </style>
 
