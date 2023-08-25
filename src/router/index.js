@@ -4,7 +4,8 @@ import { createRouter,createWebHistory } from "vue-router";
 import ProductView from '../views/ProductView.vue';
 import AboutView from "../views/AboutView.vue";
 import ContactView from '../views/ContactView.vue';
-import CardView from '../views/CardView.vue';
+import CartPage from '../views/CartPage.vue';
+
 
 
 
@@ -38,9 +39,9 @@ const router = createRouter({
             
         },
         {
-            path:"/card",
-            name:"card",
-            component:CardView
+            path:"/cart",
+            name:"cart",
+            component:CartPage
             
         }
     ]
