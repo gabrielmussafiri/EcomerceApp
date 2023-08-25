@@ -40,13 +40,6 @@ const cartItems = computed(() => store.getters.cartItems);
         </div>
       </div>
     </div>
-    <!-- Cart Section -->
-    <div class="cart">
-      <h2>Your Cart</h2>
-      <ul>
-        <li v-for="(cartProduct, index) in cartItems" :key="index">{{ cartProduct.title }}</li>
-      </ul>
-    </div>
   </main>
 </template>
 
