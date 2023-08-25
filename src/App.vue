@@ -5,7 +5,7 @@
 <template>
   <div>
     <Header/>
-    <!-- <RouterView/> -->
+    <RouterView/>
 
     
   </div>
