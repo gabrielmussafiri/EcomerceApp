@@ -17,7 +17,8 @@ const fetchProducts = () => {
 };
 
 const addToCart = (product) => {
-  cart.value.push(product);
+  cart.value.push(product.price);
+  console.log(cart);
 };
 
 onMounted(fetchProducts);
@@ -27,7 +28,7 @@ onMounted(fetchProducts);
 <template>
     <main>
         <h1>Product</h1>
-        <div class="sec" v-for="product in products" :key="product.id">
+        <section class="sec" v-for="product in products" :key="product.id">
             <div class="products">
 
                 <div class="card">
@@ -35,18 +36,19 @@ onMounted(fetchProducts);
                         <img :src="product.image" alt="">
                     </div>
 
-                    <div class="description">{{ product.description }}</div>
                     <div class="title">{{ product.title }}</div>
+                    <!-- <div class="description">{{ product.description }}</div> -->
+                    <h3 class="description">{{ product.category }}</h3>
+                    
                     <div class="box">
                         <div class="price">${{ product.price }}</div>
-                        <button class="btn">Buy Now</button>
+                        <button @click="addToCart(product)" class="btn">Add to Cart</button>
                     </div>
                 </div>
 
             </div>
-        <!-- {{ product.title }} - ${{ product.price }} -->
-      <!-- <button @click="addToCart(product)">Add to Cart</button> -->
-    </div>
+       
+        </section>
      
     </main>
 </template>
@@ -58,26 +60,32 @@ main{
     font-family: sans-serif;
     padding: 20px 5%;
 }
-/* Product */
+/* Products */
 .sec{
     padding: 10px 5%;
 }
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+}
 
-.products .cards{
+.products .card{
     width: 310px;
-    background: #f5f5f5;
-    box-shadow: 0 10px 20px rgba(0,0,0.3);
+    background: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     border-radius: 5px;
     padding: 5px;
     margin-bottom: 20px;
 }
 .products .card img{
     height: 250px;
-    width: 250px;
+    width: 100%;
 }
 .products .card .description{
     padding: 5px 20px;
     opacity: 0.8;
+    color:#424144;
+
 }
 .products .card .title{
     font-weight: 900;
