@@ -52,20 +52,19 @@ onMounted(fetchProducts);
 
 <style scoped>
 main{
-    /* margin:0;
+    margin:0;
     padding: 0;
     font-family: sans-serif;
-    padding: 20px 5%; */
+    padding: 20px 5%;
 }
 /* Products */
 .sec{
     padding: 10px 5%;
-    
 }
 .products{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
-    border: 2px solid white;
+    
 }
 
 .products .card{

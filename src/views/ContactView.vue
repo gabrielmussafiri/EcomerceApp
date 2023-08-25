@@ -1,6 +1,7 @@
 <template>
     <main>
-        <h1>Contact</h1>
+        <h1>CONTACT | EMPTY PAGE</h1>
+        
     </main>
 </template>
 
@@ -10,7 +11,11 @@ main{
     padding: 0;
     font-family: sans-serif;
     padding: 20px 5%;
-
+    
+}
+h1{
+    font-size: 40px;
+    text-align: center;
     
 }
 </style>
