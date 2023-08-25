@@ -1,11 +1,16 @@
 <script setup>
+  import { ref } from 'vue';
   import {RouterView} from "vue-router"
   import Header from './components/Header.vue';
+  import CardView from "./views/CardView.vue";
+
+
 </script>
 <template>
   <div>
     <Header/>
     <RouterView/>
+    
   </div>
 </template>
 <style scoped>

@@ -1,5 +1,4 @@
 <script setup>
-import ItemsView from '../views/ItemsView.vue';
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
 
@@ -17,8 +16,9 @@ const fetchProducts = () => {
 };
 
 const addToCart = (product) => {
-  cart.value.push(product.price);
+  cart.value.push(product);
   console.log(cart);
+
 };
 
 onMounted(fetchProducts);
@@ -31,7 +31,6 @@ onMounted(fetchProducts);
         <div class="sec" >
 
             <div class="products">
-
                 <div class="card" v-for="product in products" :key="product.id">
                     <div class="img"><img :src="product.image" alt=""></div>
                     <div class="title">{{ product.title }}</div>
