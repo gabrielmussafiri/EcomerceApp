@@ -27,8 +27,13 @@ onMounted(fetchProducts);
 <template>
     <main>
         <h1>Product</h1>
-        <ItemsView v-for="products in fetchProducts"/>
-        
+        <div class="card"></div>
+        <div v-for="product in products" :key="product.id">
+            <img :src="product.image" alt="">
+        <!-- {{ product.title }} - ${{ product.price }} -->
+      <!-- <button @click="addToCart(product)">Add to Cart</button> -->
+    </div>
+     
     </main>
 </template>
 

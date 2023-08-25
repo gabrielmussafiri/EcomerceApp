@@ -1,7 +1,7 @@
 <script setup>
 import { defineProps } from 'vue';
 
-const {product} = defineProps(['fetchProducts'])
+const {product} = defineProps(['product'])
 
 </script>
 
