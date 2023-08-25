@@ -1,6 +1,12 @@
+<script setup>
+import { defineProps } from 'vue';
+
+const {product} = defineProps(['fetchProducts'])
+
+</script>
+
 <template>
-    <div>
-    <h1>Here is all Products</h1>
-        
+    <div class="card">
+    <img :src="product.image" alt="">
     </div>
 </template>

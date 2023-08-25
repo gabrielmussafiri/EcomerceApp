@@ -27,8 +27,7 @@ onMounted(fetchProducts);
 <template>
     <main>
         <h1>Product</h1>
-        <ItemsView/>
-        
+        <ItemsView v-for="products in fetchProducts"/>
         
     </main>
 </template>
