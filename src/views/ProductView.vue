@@ -27,8 +27,23 @@ onMounted(fetchProducts);
 <template>
     <main>
         <h1>Product</h1>
-        <div class="container" v-for="product in products" :key="product.id">
-            <img :src="product.image" alt="">
+        <div class="sec" v-for="product in products" :key="product.id">
+            <div class="products">
+
+                <div class="card">
+                    <div class="img">
+                        <img :src="product.image" alt="">
+                    </div>
+
+                    <div class="description">{{ product.description }}</div>
+                    <div class="title">{{ product.title }}</div>
+                    <div class="box">
+                        <div class="price">${{ product.price }}</div>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+
+            </div>
         <!-- {{ product.title }} - ${{ product.price }} -->
       <!-- <button @click="addToCart(product)">Add to Cart</button> -->
     </div>
@@ -43,24 +58,18 @@ main{
     font-family: sans-serif;
     padding: 20px 5%;
 }
-.container{
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 40px;
-  width:fit-content;
-  height:fit-content;
-  overflow:hidden;
-  border-radius: 2%;
-  box-shadow: 1px 1px 10px rgba(0 ,0,0, 0.1);
-  margin-bottom: 35px;
-  margin-right: 20px;
-  cursor: pointer;
-  
+/* Product */
+.sec{
+    padding: 10px 5%;
 }
-.container img{
-    width: 100%;
-    height: 190px;
-    margin: 0;
+
+.products .cards{
+    width: 310px;
+    background: #f5f5f5;
+    box-shadow: 0 10px 20px rgba(0,0,0.3);
+    border-radius: 5px;
+    padding:
+
 }
 </style>
 
