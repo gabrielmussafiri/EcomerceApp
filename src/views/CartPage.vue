@@ -18,10 +18,9 @@ const removeFromCart = (index) => {
 <template>
     <main>
       <div class="cart">
-        <h2>My Card</h2>
         <ul>
-          <li v-for="(cartProduct, index) in cartItems" :key="index">
-            <div class="card">
+          <li class="cart" v-for="(cartProduct, index) in cartItems" :key="index">
+            <div class="card" >
               <div class="img"><img :src="cartProduct.image" alt=""></div>
               <div class="title">{{ cartProduct.title }}</div>
               <div class="price">${{ cartProduct.price }}</div>
@@ -35,11 +34,11 @@ const removeFromCart = (index) => {
   </template>
   <style scoped>
 
-  /* .cart{
+  .cart{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 
-  } */
+  }
 
   .card {
   width: 310px;
@@ -77,6 +76,9 @@ const removeFromCart = (index) => {
   cursor: pointer;
   background-color: #f63e4e;
   color: white;
+}
+.total{
+    font-size: 30px;
 }
 
 
