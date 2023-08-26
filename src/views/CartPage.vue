@@ -8,6 +8,10 @@ const cartItems = computed(() => store.getters.cartItems);
 const total = computed(() => {
   return cartItems.value.reduce((total, product) => total + product.price, 0);
 });
+// Method to remove a product from the cart
+const removeFromCart = (index) => {
+    store.commit('removeFromCart', index); // Call the mutation to remove the product
+};
 
 </script>
 
@@ -21,7 +25,7 @@ const total = computed(() => {
               <div class="img"><img :src="cartProduct.image" alt=""></div>
               <div class="title">{{ cartProduct.title }}</div>
               <div class="price">${{ cartProduct.price }}</div>
-              <button @click="" class="btn">Delete</button>
+              <button @click="removeFromCart(index)" class="btn">Remove</button>
             </div>
           </li>
         </ul>
